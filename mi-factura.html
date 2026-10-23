@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Factura - Ahorra Energía</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navegación -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+    <a class="navbar-brand" href="index.html">Ahorra Energía</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="equipos.html">Equipos</a></li>
+        <li class="nav-item"><a class="nav-link active" href="mi-factura.html">Mi Factura</a></li>
+        <li class="nav-item"><a class="nav-link" href="encuesta.html">Encuesta</a></li>
+        <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+<main class="container my-4">
+    <h1 class="mb-4">Historial de Facturación y Análisis</h1>
+
+<div class="row mb-4">
+<!-- Foto de la Factura -->
+    <div class="col-md-5 mb-3">
+        <div class="card">
+        <figure class="m-0">
+            <img src="img/Energia_Septiembre.jpg" class="card-img-top" alt="Foto de la factura de energía del hogar">
+            <figcaption class="card-body">
+            <h5 class="card-title">Factura de Energía</h5>
+            <p class="card-text text-muted">Detalle de lectura y valores cobrados.</p>
+            </figcaption>
+        </figure>
+        </div>
+    </div>
+
+<!-- Tabla Histórica -->
+<div class="col-md-7">
+    <h2>Histórico de Consumo</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped align-middle">
+            <caption class="text-muted">Tabla de consumo e importe de los últimos meses</caption>
+            <thead class="table-dark">
+            <tr>
+                <th>Periodo</th>
+                <th>Consumo (kWh)</th>
+                <th>Valor Cobrado</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Julio - Agosto 2026</td>
+                <td>64 kWh</td>
+                <td>$58,968</td>
+            </tr>
+            <tr>
+                <td>Agosto - Septiembre 2026</td>
+                <td>63 kWh</td>
+                <td>$58,046</td>
+            </tr>
+            <tr>
+                <td>Septiembre - Octubre 2026</td>
+                <td>61 kWh</td>
+                <td>$58,580</td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>
+
+<!-- Comparación -->
+    <div class="card p-3 mb-4 bg-light">
+    <h2>Comparación con la Proyección de Equipos</h2>
+    <p>
+        La proyección teórica de la página Equipos da un consumo estimado mensual de <strong>135.8 kWh</strong>, 
+        mientras que la factura a la hora de la verdad marca<strong>61 kWh</strong>. 
+    </p>
+    <p>
+        Esta diferencia ocurre porque el motor de la nevera se apaga automáticamente al llegar a la temperatura deseada 
+        y el computador no consume la potencia máxima constante durante todo su uso.
+    </p>
+    </div>
+
+<!-- Recomendaciones -->
+    <h2>Recomendaciones de Ahorro</h2>
+    <ul class="list-group mb-4">
+    <li class="list-group-item">
+        <strong>1. Mantenimiento de la Nevera:</strong> Mantener limpios los empaques de la puerta para evitar pérdidas de frío.
+    </li>
+    <li class="list-group-item">
+        <strong>2. Desconectar equipos sin uso:</strong> Apagar tiras multicontacto del televisor y computador para evitar consumo en reposo.
+    </li>
+    <li class="list-group-item">
+        <strong>3. Aprovechar iluminación y ventilación natural:</strong> Reducir horas de uso de lámparas y ventilador abriendo ventanas.
+    </li>
+    </ul>
+</main>
+
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="m-0">&copy; 2026 - Consumo de Energía en el Hogar</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Encuesta - Ahorra Energía</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navegación -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+    <a class="navbar-brand" href="index.html">Ahorra Energía</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="equipos.html">Equipos</a></li>
+        <li class="nav-item"><a class="nav-link" href="mi-factura.html">Mi Factura</a></li>
+        <li class="nav-item"><a class="nav-link active" href="encuesta.html">Encuesta</a></li>
+        <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+<main class="container my-4">
+    <h1 class="mb-4">Encuesta de hábitos energéticos</h1>
+
+    <form action="encuesta.html" method="get" class="card p-4 shadow-sm">
+
+<!-- Grupo 1: Datos Personales -->
+    <fieldset class="mb-4">
+        <legend class="fw-bold text-primary">1. Datos del Usuario</legend>
+
+<!-- Campo 1: text -->
+        <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" class="form-control" required>
+        </div>
+
+<!-- Campo 2: email -->
+        <div class="mb-3">
+        <label for="correo" class="form-label">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" class="form-control" required>
+        </div>
+    </fieldset>
+
+<!-- Grupo 2: Hábitos de Consumo -->
+    <fieldset class="mb-4">
+        <legend class="fw-bold text-primary">2. Hábitos en el Hogar</legend>
+
+<!-- Campo 3: number con min y max -->
+        <div class="mb-3">
+        <label for="personas" class="form-label">Número de personas en el hogar (1 a 10):</label>
+        <input type="number" id="personas" name="personas" class="form-control" min="1" max="10" required>
+        </div>
+
+<!-- Campo 4: select -->
+        <div class="mb-3">
+        <label for="tipo_vivienda" class="form-label">Tipo de vivienda:</label>
+        <select id="tipo_vivienda" name="tipo_vivienda" class="form-select" required>
+            <option value="">Seleccione una opción</option>
+            <option value="Apartamento">Apartamento</option>
+            <option value="Casa">Casa</option>
+        </select>
+        </div>
+
+<!-- Campo 5: range -->
+        <div class="mb-3">
+        <label for="nivel_uso" class="form-label">Nivel de consumo percibido (1 muy bajo, 5 muy alto):</label>
+        <input type="range" id="nivel_uso" name="nivel_uso" class="form-range" min="1" max="5">
+        </div>
+
+<!-- Campo 6: radio -->
+        <div class="mb-3">
+        <label class="form-label d-block">¿Desconecta los equipos cuando no los utiliza?</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="desconecta_si" name="desconecta" value="si" required>
+            <label class="form-check-label" for="desconecta_si">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="desconecta_no" name="desconecta" value="no">
+            <label class="form-check-label" for="desconecta_no">No</label>
+        </div>
+        </div>
+
+<!-- Campo 7: checkbox -->
+        <div class="mb-3">
+        <label class="form-label d-block">¿Qué equipos utiliza diariamente?</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="eq_ventilador" name="equipos" value="ventilador">
+            <label class="form-check-label" for="eq_ventilador">Ventilador</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="eq_pc" name="equipos" value="computador">
+            <label class="form-check-label" for="eq_pc">Computador</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="eq_tv" name="equipos" value="televisor">
+            <label class="form-check-label" for="eq_tv">Televisor</label>
+        </div>
+        </div>
+
+<!-- Campo 8: textarea -->
+        <div class="mb-3">
+        <label for="comentarios" class="form-label">Sugerencias o comentarios sobre ahorro:</label>
+        <textarea id="comentarios" name="comentarios" class="form-control" rows="3"></textarea>
+        </div>
+    </fieldset>
+
+    <button type="submit" class="btn btn-primary">Enviar Encuesta</button>
+    </form>
+</main>
+
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="m-0">&copy; 2026 - Consumo de Energía en el Hogar</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
